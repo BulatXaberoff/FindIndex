@@ -1,0 +1,11 @@
+def FindIndex(expression: str, sign: tuple) -> dict:
+    result = {}
+    n = 0
+    for i in expression:
+        if i in sign:
+            if i in result.keys():
+                result[i] += (n,)
+            else:
+                result[i] = (n,)
+        n += 1
+    return result
